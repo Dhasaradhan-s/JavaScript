@@ -1,0 +1,141 @@
+Day03_Task
+----------
+
+1. How to compare two json have the sam eproperties without order?
+  
+    let obj1 = {name:"person 1" ,age5};
+    let obj3 ={age:5,name:"person 1"};
+    
+    
+let obj1 = {name:"person 1" ,age:5};
+let obj2 = {age:5,name:"person 1"};
+
+let arr = [obj1,obj2];
+
+for(var key in obj1) {
+
+console.log(key);
+
+    if(!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]) {
+      return  console.lo("Invalid Object");
+    }else {
+        return console.log("Valid Object");
+    }
+    
+  }
+  
+----------------------------------------------------------------------------------------------------------------------------------  
+  
+2.  Use  the rest countries API URL -> https://restcountries.com/v3.1/all   and display all the country flags in the console.
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        debugger;
+        if (xhr.status === 200) {
+          //Request was successful
+          console.log(xhr.responseText);
+
+          //[{flags}.{}]
+
+          var data = JSON.parse(xhr.responseText);
+
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].flag);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------  
+
+3.uset the same rest countries and print all countries names,regions,sub-region,populations.
+
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        debugger;
+        if (xhr.status === 200) {
+          //Request was successful
+          // console.log(xhr.responseText);
+
+          //[{flags}.{}]
+
+          // name.common
+          // region
+          // subregion
+          // population
+
+          var data = JSON.parse(xhr.responseText);
+
+          for (var i = 0; i < data.length; i++) {
+            // var arr =[];
+            // arr.push(data[i].name.common);
+            // arr.push(data[i].region);
+            // arr.push(data[i].subregion);
+            // arr.push(data[i].population);
+            // console.log(arr);
+
+            var obj = {};
+            obj.name = data[i].name.common;
+            obj.region = data[i].region;
+            obj.subregion = data[i].subregion;
+            obj.population = data[i].population;
+            console.log(obj);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+----------------------------------------------------------------------------------------------------------------------------------  
+
+Reference=> https://medium.com/@reach2arunprakash/www-guvi-io-zen-d395deec1373
+
+

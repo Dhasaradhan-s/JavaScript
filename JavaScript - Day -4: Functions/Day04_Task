@@ -1,0 +1,281 @@
+Day04_Task
+----------
+
+1.Do the below programs in anonymous function & IIFE
+
+
+Print odd numbers in an array
+
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+
+var oddFunc = function(arr){{}
+    for(var i=0;i<arr.length;i++){
+        if(arr[i]%2 != 0){
+            console.log(arr[i])
+        }
+    }
+}
+
+oddFunc(arr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Convert all the strings to title caps in a string array
+
+
+var arr = ["html","css","java script","nodejs","react"];
+
+var capsFunc = function(arr){{}
+    for(var i=0;i<arr.length;i++){
+        
+    var temp = arr[i];
+    var capsString = temp.charAt(0).toUpperCase()+temp.slice(1);
+    console.log(capsString);
+          
+          
+    }
+}
+
+capsFunc(arr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Sum of all numbers in an array
+
+
+
+var arr = [1,2,3,4,5];
+var temp=0;
+
+var sumFunc = function(arr){
+    for(var i=0;i<arr.length;i++){
+         temp = temp + Number(arr[i]);
+    }
+    console.log(temp);
+}
+
+sumFunc(arr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Return all the prime numbers in an array
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Return all the palindromes in an array
+
+// var data ="Hello";   //5 
+// var rev="";
+//          //4             4>=0  --
+// for(var i=data.length-1;i>=0;i--){
+//          rev=rev+data[i];
+// }
+// console.log(rev);
+
+
+var arr = ["Hello","mom","malayalam"];
+var newArr =[];
+
+var paFunc = function(arr){
+    for(var i=0;i<arr.length;i++){
+       
+      var temp=arr[i];
+      var rev="";
+       
+      for(var j=temp.length-1;j>=0;j--){
+             rev=rev+temp[j];
+      }
+      if(temp == rev){
+                  newArr.push(temp);
+              }
+    }
+}
+
+paFunc(arr);
+
+console.log(newArr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+Return median of two sorted arrays of the same size.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Remove duplicates from an array
+
+
+var arr = [1,2,3,4,5,1,2,3,4,5,6,7,8];
+
+var filFunc = function(arr){
+    return arr.filter(
+        (item,index) => {
+            
+            // console.log("item index",arr.indexOf(item))
+            // console.log("index",index)
+            
+          if(arr.indexOf(item) == index){
+              
+              return item;
+          }
+            
+        });
+}
+
+var newArr = filFunc(arr);
+console.log(newArr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+Rotate an array by k times
+
+
+var arr = [1,2,3,4,5];
+
+console.log(arr);
+
+var n = arr.length;
+// console.log(n);
+
+var k =2;
+
+k = k%n;
+// console.log(k);
+
+
+console.log(arr.slice(k).concat(arr.slice(0,k)));
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+2.Do the below programs in arrow functions.
+	
+Print odd numbers in an array
+
+
+var arr = [12,13,14,15];
+
+var func = (arr) => {
+    
+    for(var value of arr){
+        
+        if(value%2 != 0){
+            console.log("Odd ",value)
+        }
+        
+    }
+    
+}
+
+func(arr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+Convert all the strings to title caps in a string array
+
+
+var arr = ["hello","world"];
+
+var func = (arr) => {
+    
+    for(var value of arr){
+        
+        var temp = value;
+        
+          console.log(value.charAt(0).toUpperCase()+temp.slice(1));
+        
+    }
+    
+}
+
+func(arr);
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Sum of all numbers in an array
+
+
+var arr = [1,2,3,4,5];
+
+var func = (arr) => {
+    
+    var sum =0;
+    
+    for(var value of arr){
+        
+         sum =sum+value;
+        
+    }
+    
+    console.log(sum);
+    
+}
+
+func(arr);
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Return all the prime numbers in an array
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Return all the palindromes in an array
+
+
+
+var arr = ["Hello","mom","malayalam"];
+
+var func = (arr) => {
+    
+    
+   for(var i=0;i<arr.length;i++){
+       
+      var temp=arr[i];
+      var rev="";
+       
+      for(var j=temp.length-1;j>=0;j--){
+             rev=rev+temp[j];
+      }
+      if(temp == rev){
+                  console.log(temp);
+              }
+    }
+    
+   
+    
+}
+
+func(arr);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

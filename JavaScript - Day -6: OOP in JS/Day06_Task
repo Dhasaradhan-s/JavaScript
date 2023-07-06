@@ -1,0 +1,110 @@
+Day06_Task
+----------
+
+https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+
+Solution:
+
+class Movie {
+    
+   constructor(title,studio,rating="PG"){
+       this.title = title;
+       this.studio=studio;
+       this.rating=rating;
+   } 
+   
+    getPG(movies){
+           return movies.filter((movie) => movie.rating === "PG");
+   }
+    
+}
+
+var film = new Movie("Casino Royale","Eon Productions","PG13");
+console.log(film);
+
+const movies = [
+  new Movie("Movie 1", "Studio 1", "PG"),
+  new Movie("Movie 2", "Studio 2", "PG-13"),
+  new Movie("Movie 3", "Studio 3", "R"),
+  new Movie("Movie 4", "Studio 4", "PG"),
+];
+
+const pgMovies = film.getPG(movies);
+console.log(pgMovies);
+
+------------------------------------------------------------------------------------------------------------------------------------
+https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Write a “person” class to hold all the details.
+
+Solution:
+
+class Person {
+    
+    constructor(name,age,salary){
+        this.name=name;
+        this.age=age;
+        this.salary=salary;
+    }
+    
+    getAllDetails(){
+        
+         console.log("MyName :"+this.name+"My Age :"+this.age+"My Salary :"+this.salary);
+         
+         
+    }
+    
+    
+}
+
+var obj = new Person("dhasaradhan",23,10000);
+console.log(obj);
+obj.getAllDetails();
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+write a class to calculate the uber price.
+
+Solution:
+
+class Uber {
+    
+    constructor(location1,location2,kilometer){
+        this.location1 = location1;
+         this.location2 = location2;
+         this.kilometer = kilometer;
+    }
+    
+    checkPrice(rideDetails){
+        
+        var totalprice = Number(rideDetails.kilometer) * 15;
+        
+        console.log("StartLocation: "+this.location1);
+        console.log("StopLocation: "+this.location2);
+        console.log("TotalPrice: "+totalprice);
+
+    }
+    
+}
+
+var ride1 = new Uber("Trichy","Chennai",350);
+ride1.checkPrice(ride1);
+
+

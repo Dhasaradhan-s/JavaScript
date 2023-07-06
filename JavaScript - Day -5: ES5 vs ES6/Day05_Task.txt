@@ -1,0 +1,135 @@
+JavaScript - Day -5: ES5 vs ES6
+-------------------------------
+
+1.For the given Json iterate over al fro loops(for,for in, for of,forEach);
+
+<html>
+  <head>
+    <title>Day05 Task</title>
+  </head>
+  <body>
+    <script>
+      var request = new XMLHttpRequest();
+      request.open("GET", "https://restcountries.com/v3.1/all");
+      request.send();
+
+      request.onload = function () {
+        var result = JSON.parse(request.response);
+        // console.log(result);
+
+        //for
+
+        // for(var i=0;i<result.length;i++){
+
+        //   console.log(result[i]);
+
+        // }
+
+        //for in
+
+        //  for(let data in result){
+        //   console.log(result[data]);
+        //  }
+
+        //for of
+
+        // for(var data of result){
+        //   console.log(data);
+        // }
+
+        //foreach
+
+        // result.forEach((element) => {
+
+        //   console.log(element);
+
+        // });
+      };
+    </script>
+  </body>
+</html>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+2.Create your own resume data in JSON Format.
+
+<html>
+  <head>
+    <title>Day05 Task</title>
+  </head>
+  <body>
+    <script>
+      let myResume = {
+        basics: {
+          name: "dhasaradhan",
+          email: "dhasaradhan1810@gamil.com",
+          phone: NA,
+          degree: "BCA",
+          location: {
+            address: "NA",
+            postalCode: NA,
+            city: "NA",
+            state: "Tamilnadu",
+            country: "India",
+          },
+          profiles: [
+            {
+              website: "https://www.linkedin.com/in/",
+              github: "https://github.com/dhasaradhan-s",
+            },
+          ],
+        },
+        work: [
+          {
+            company: "XXX",
+            position: "Juinor Data Engineer",
+            startDate: "NA",
+            endDate: "NA",
+            summary: "Manipulate Data",
+          },
+        ],
+        education: [
+          {
+            institution: "xxx",
+            department: "BCA",
+            studyType: "fulltime",
+            "batch start year": 2017,
+            "batch end year": 2020,
+            gpa: NA,
+          },
+        ],
+        skills: [
+          {
+            name: "javascript",
+            level: "beginer",
+            project: ["Yet to create"],
+          },
+        ],
+        languages: [
+          {
+            language: "Tamil,English",
+          },
+        ],
+        interests: [
+          {
+            name: "WebDevelopment",
+          },
+        ],
+      };
+      console.log(myResume);
+    </script>
+  </body>
+</html>
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+3.Read about the difference between window,screen and document in javascript
+
+4.codekata Practice
+
+
+
+
